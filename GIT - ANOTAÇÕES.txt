@@ -1,0 +1,204 @@
+Comandos GIT curso UDEMY
+
+Primeiros comandos de identificação:
+
+git config --global user.name "name usuário" /*NOME USUÁRIO*/
+
+git config --global user.email "e-mail usuário" /*E-MAIL USUÁRIO*/
+ 
+clear /*LIMPA GIT BASH*/
+
+git config /*LISTA DE TODAS CONFIGURAÇÕES*/
+
+ls /*LISTA OS ARQUIVOS DA PASTA*/
+
+ls -a /*LISTA TODOS ARQUIVOS ATÉ ESCONDIDOS*/
+
+git init /*INICIALIZA O REPOSITÓRIO "MASTER" REPRESENTA UM RAMO (BRANCH)*/
+
+git config --global init.defaultbranch main /*DEFINE POR PADRÃO A BRANCH COMO MAIN*/
+
+git add ex. hello.txt /*GIT ADICIONA E COMEÇA A RASTREAR O ARQUIVO hello.txt*/
+
+git add --all /*GIT ADICIONA E COMEÇA RASTREAR TODOS ARQUIVOS DA PASTA*/
+
+rm -fr ex. hello.txt /*REMOVE A PASTA hello.txt*/
+
+git rm --cached ex. hello.txt /*GIT PARA DE RASTREAR O ARQUIVO*/
+
+git rm --cached -r . /*GIT PARA DE RASTREAR TODOS ARQUIVOS DA PASTA*/
+
+git commit -m "primeira versão" /*AQUI O GIT ENTENDE QUE O ARQUIVO ESTÁ PRONTO ENTÃO É COMMITADO PARA A MASTER*/
+
+git diff /*COMPARA AS DUAS VERSÕES DA COMMITADA COM A QUE ESTÁ MODIFICADA (SEM STAGED)*/
+
+git diff --cached /* COMPARA AS VERSÕES, COMMITADA COM A QUE ESTÁ EM STAGED*/
+
+git log /*LISTAGEM DE COMMIT DECRESCENTE MAIS RECENTE A MAIS VELHA*/
+
+git log --oneline /*FAZ O RESUMO DOS COMMITS*/
+
+git log ex. -1 /*APRESENTA 1 COMMIT*/
+
+git log --oneline ex. -1 /*EXIBE O ÚLTIMO COMMIT USANDO O RESUMO DE COMMITS*/
+
+git log -p /*APRESENTA A DIFERENÇA EM ATUALIZAÇÃO DE PACHT*/
+
+git log --stat /*GIT LOG PADRÃO + ARQUIVO QUE FOI ALTERADO*/
+
+git commit --amend -m "teste 01 commit" /*ALTERA O ÚLTIMO COMMIT*/
+
+git commit --amend --no--edit /*ALTERA O ÚLTIMO COMMIT, (--NO--EDIT) REPRESENTA SEM MENSAGEM*/
+
+git config --global core.editor "code --wait" /*CONFIGURA O EDITOR PADRÃO USADO NO GIT*/
+
+code . /*ABRE VSCODE NA PASTA ABERTA PELO GIT BASH*/
+
+git checkout ex. fc80db2 /*VOLTA A VERSÃO DESEJAVA DO COMMIT*/
+
+git checkout master /*REVERTE O GIT CHECKOUT PARA A ULTIMA VERSÃO NOVAMENTE*/
+
+git clean -f ex. hello.txt /*APAGA ARQUIVOS NÃO RASTREADOS*/
+
+git checkout . /*VOLTA VERSÃO DE TODOS OS ARQUIVOS*/
+
+git reset --hard /*VOLTA VERSÃO DE ARQUIVOS RASTREADOS OU COMMITADOS*/
+
+git update-index --skip-worktree ex. index.html /*ENVIA COMANDO PARA PARAR DE RASTREAR O ARQUIVO DEPOIS DE COMMITADO*/
+
+git update-index --no-skip-worktree ex. index.html /*VOLTA A RASTREAR O ARQUIVO INDEX.HTML*/
+
+cd Udemy-Git/ /*ENTRA NA PASTA Udemy-Git*/
+
+cd .. /*VOLTA UMA PASTA*/
+
+
+A PARTIR DESTE PONTO COMEÇA COMANDOS VOLTADOS AO GITHUB.
+
+
+git clone Teste\ GIT/ Clone /*REALIZADO UM CLONE DO REPOSITÓRIO Teste*/
+
+git remote -v /*TRAZ O LINK DO REPOSITÓRIO REMOTO*/
+
+git remote add origin ex. https://github.com/luidymarcelo/teste.git /*ADICIONA O LINK COMO ORIGEM DE REPOSITÓRIO REMOTO*/
+
+git remote set-url origin https://github.com/luidymarcelo/teste2.git /*ALTERA O APONTAMENTO DA URL DO ORIGIN*/
+
+git push /*ENVIA DO REPOSITÓRIO LOCAL PARA O REMOTO*/
+
+git pull /*TRAZ DO REPOSITÓRIO REMOTO, PARA A LOCAL*/
+
+git log /*TRAZ OS COMMITS*/
+
+ssh-keygen /*GERA CHAVE SSH*/
+
+ssh-keygen -t rsa -C "Luidy" /*GERA CHAVE E PASSWORD 'PRESTAR ATENÇÃO'*/
+
+ls -la /*LISTA OS ARQUIVOS DENTRO DA PASTA REPARAR NO AQUIVO ******.pub ELE SERVE PARA GERAR A CHAVE SRA*/
+
+cat *******.pub /*GERA A CHAVE QUE VAI SER USADA NO GITHUB*/
+
+cd ~/.ssh/ /*VAI PARA A PASTA SSH*/
+
+start . /*ABRE ARQUIVO SSH*/
+
+
+STARTANDO SSH ANTES DE "PUXAR REPOSITÓRIO"
+
+
+eval $(ssh-agent)
+
+ssh-add ~/.ssh/Luidyrsa /*DERECIONA A QUAL CHAVE KEY EU VOU USAR*/
+
+
+GIT BRANCHS
+
+
+git branch --list /*LISTA TODAS BRANCHS*/
+
+git branch ex. develop /*CRIA UMA NOVA BRANCH*/
+
+git checkout develop /*COMEÇA USAR A BRANCH DEVELOP*/
+
+git checkout -b ex. develop2 /*CRIA E LOGO JÁ ENTRA NA BRANCH CRIADA*/
+
+git switch develop /*TAMBÉM ALTERA PARA A BRANCH DESEJAVA*/
+
+git switch /*VOLTA BRANCH*/
+
+git switch -c ex. develop_3 /*CRIA NOVA BRANCH INDEPENDENTE A VERSÃO DE COMMIT QUE VOCÊ ESTÁ, AJUSTA HEAD TAMBÉM*/
+
+git push -u origin ex. develop /*ENVIA BRANCH PARA SERVIDOR REMOTO*/
+
+git branch -d ex. develop_3 /*REMOVE BRANCH LOCAL*/
+
+git push --delete origin ex. develop /*REMOVE BRANCH REMOTA*/
+
+git branch -m ex. developer /*RENOMEA ABRANCH OBS. DEVE ESTAR NA BRANCH LOCAL*/
+
+git log ex. develop --oneline /*LOG DOS COMMITS NA BRANCH DEVELOP*/
+
+git merge ex. develop /*FAZ O MERGE DA BRANCH DEVELOP PARA A BRANCH ATUAL*/
+
+git branch --no-merged /*LISTA AS BRANCHS PENDENTES AO MERGE*/
+
+git merge --abort /*ABORTA MERGE EM CONFLITO*/
+
+TAGS /*SE TRATA DE MARCAÇÕES NOS COMMITS, PARA DESTACAR VERSÕES IMPORTANTE DURANTE A CRIAÇÃO DO PROJETO*/
+
+git tag ex. v1 /*FAZ A MARCAÇÃO DA TAG NO COMMIT QUE ESTÁ NO MOMENTO*/
+
+git tag -a -m "tag criada v2" v2 /*CRIA TAG COM MENSAGEM E DESTACA QUEM A FEZ*/
+
+git show ex. v2 /*MOSTRA INFORMAÇÕES SOBRE A TAG v2*/
+
+git tag /*APARECE TODAS TAGS*/
+
+git tag v1 ex. 123asa5 /*CRIA TAG NO COMMIT DESEJADO*/
+
+git push origin ex. v2 /*FAZ PUSH DA TAG DESEJADA*/
+
+git push --tags /*PUSH DE TODAS TAGS DO REPOSITÓRIO*/
+
+git dif ex. v1 v2 /*DIFERENÇA ENTRE AS TAGS*/
+
+git tag -d ex. v1 /*REMOVE TAG*/
+
+git push --delete origin ex. v1 /*REMOVE TAG SERVIDORE REMOTE*/
+
+git fecht origin ex. develop /*TRÁS BRANCH DEVELOP DO SERVIDOR*/
+
+git rebase --interactive HEAD~3 /*REALIZA A JUNÇÃO DE 3 COMMITS OBS ABRE VSCODE DEVE SER ALTERADO PICK PARA SQUASH PARA MENCIONA OS COMMITS QUE SERÃO MESCLADOS, SOMENTE FICARÁ UM COMMIT COM PICK*/
+
+git cherry-pick asa77a7 /*TRÁS COMMIT DE OUTRA BRANCH (GERA UM NOVO REST)*/
+
+
+BISECT
+
+
+git bisect start /*STARTA GIT BISECT*/
+
+git bisect good ex. bf544f5 /*COMMIT BOM (ONDE TUDO FUNCIONA)*/
+
+git bisect bad ex ffd55ss /*COMMIT RUIM (ONDE FOI NOTADO QUE COMEÇOU A DAR ERRADO)*/
+
+git bisect reset /*PARA INTERAÇÃO DO BISECT (QUITA)*/
+
+git fecht /*TRÁS MUDANÇAS DO SERVIDOR REMOTO*/
+
+git branch -a /*MOSTRA TODAS BRANCHS, SE EXECUTADO FECHT IRÁ PARECER GIT REMOTE/ORIGIN/MAIN OU DEMAIS BRANCHS*/
+
+git merge /*TRÁS COMMITS DO REMOTO, SERVE PARA QUANDO REALIZA O FECHT E DEPOIS QUER TRAZER AS ALTERAÇÕES DE FATO*/
+
+
+ALIAS
+
+
+git config --global alias.s status /*REALIZA ALIAS DO COMANDO STATUS, NÃO ESQUECER DO ' ' PARA PALAVRAS CHAVES COM ESPAÇO*/
+
+git config --global --unset alias.s /*DESCARTA ALIAS "S"*/
+
+git branch | grep ex. r1 /*REALIZA PROCURA NAS BRANCHS COM CARACTER "r1"*/
+
+git log --oneline | grep ex. commit /*REALIZA PROCURA NOS COMMITS ONDE APAREÇA "commit"
+
