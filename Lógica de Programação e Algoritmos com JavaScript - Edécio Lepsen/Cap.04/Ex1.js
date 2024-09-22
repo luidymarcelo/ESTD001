@@ -16,10 +16,13 @@ frm.addEventListener("submit", (e) =>{
     if (media >= 7){
     resp2.innerText   = `Parabéns! Você foi aprovado`
     resp2.style.color = "Green"
-    }
-
-    if (media < 7){
-    resp2.innerText   = `Parabéns seu burro, você foi reprovado`
-    resp2.style.color = "Red"
-    }
+    }   
+        else if (media >= 4 ){
+        resp2.innerText   = `Você está em recuperação! Tanso`
+        resp2.style.color = "Yellow"
+        }
+            else {
+            resp2.innerText   = `Parabéns seu burro, você foi reprovado`
+            resp2.style.color = "Red"
+            }
 })
