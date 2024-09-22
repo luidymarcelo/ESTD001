@@ -25,4 +25,4 @@ frm.addEventListener("submit", (e) =>{
             resp2.innerText   = `Parabéns seu burro, você foi reprovado`
             resp2.style.color = "Red"
             }
-})
+}) 
