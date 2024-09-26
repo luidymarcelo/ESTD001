@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"      content="IE=edge">
+    <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
+    <link rel="icon"                        type="image/png"                                   href="mapa-esquema-fusos-horarios.jpg">
+    <link rel="stylesheet"                  href="Estilos.css">
+    <title> Eemplo 2 cap.04</title>
+</head>
+<body>
+    <img src="mapa-esquema-fusos-horarios.jpg"           alt="Fusos horários">
+    <h1> Programa Cálculo do Peso Ideal</h1>
+    <form>
+        <p> Nome:
+            <input type="text"                           id="inNome"         required>
+        </p>
+
+        <p> Sexo:
+            <input type="radio" name="sexo"              id="inMasculino"    required> Masculino
+            <input type="radio" name="sexo"              id="inFeminino"     required> Feminino
+        </p>
+
+        <p> Altura:
+            <input type="number" min="0"  step="0.01"    id="inAltura"      required>
+        </p>
+
+        <p>
+            <input type="submit" value="Calcular Peso Ideal">
+            <input type="reset"  value="Limpar Campos">
+        </p>
+    </form>
+    <h3></h3>
+    <script src="Ex2.js"></script>
+</body>
+</html>
