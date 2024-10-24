@@ -1,0 +1,15 @@
+<script>
+    const amigos = [
+        {nome: "Ana", idade:"20"},
+        {nome: "Anastácia", idade:"21"},
+        {nome: "João", idade:"30"},
+        {nome: "Bruna", idade:"25"}
+    ]
+
+    const amigos2 = amigos.map(aux => ({nome: aux.nome, nasc: 2024 - aux.idade}))
+    //.MAP ALTERA OS ELEMENTOS DO VETOR E CRIA UM NOVO ARRAY CONTENDO AS MESMAS QUANTIDADES
+     
+    for (const amigo of amigos2) {
+        console.log(`${amigo.nome} - nasceu em: ${amigo.nasc}`)
+    }
+</script>

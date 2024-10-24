@@ -1,0 +1,10 @@
+<script>
+    const numeros = [13,15]
+    const pares = numeros.filter(num => num % 2 == 0)
+
+    if (pares.length == 0) {
+        console.log(`Não há dados referentes a números pares`)
+    } else {
+        console.log(pares.join(', '))
+    }
+</script>

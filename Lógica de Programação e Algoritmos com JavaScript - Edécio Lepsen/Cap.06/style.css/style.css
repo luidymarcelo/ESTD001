@@ -1,0 +1,18 @@
+  img.normal {float: left    ; height: 300px; width  : 300px;}
+/*img.normal {float: esquerda; altura: 300px; largura: 300px;}*/
+  img.alta {float: left    ; height: 420px; width  : 300px;}
+/*img.alta {float: esquerda; altura: 420px; largura: 300px;}*/
+  h1 {border-bottom-style     : inset   ;}
+/*h1 {estilo inferior da borda: inserção;}*/
+  pre {font-size       : 1.2em;}
+/*pré {tamanho da fonte: 1,2em;}*/
+  .fonte-azul {color: blue;}
+  .oculta {display: none;}
+  .exibe {display: inline;}
+  .italico {font-style: italic}
+/*
+  .fonte-azul {cor: azul;}
+  .oculta {exibição: nenhum;}
+  .exibe {display: inline;}
+  .italico {estilo de fonte: itálico}
+*/
