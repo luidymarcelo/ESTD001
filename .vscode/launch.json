@@ -2,6 +2,20 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "Attach to Chrome",
+			"port": 5500,
+			"request": "attach",
+			"type": "chrome",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"name": "Launch Edge",
+			"request": "launch",
+			"type": "msedge",
+			"url": "http://localhost:5500",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
 			"type": "totvs_language_debug",
 			"request": "launch",
 			"name": "TOTVS Language Debug",
@@ -13,6 +27,30 @@
 			"extendFeatures": {
 				"charDetails": false
 			}
+		},
+		{
+			"type": "node-terminal",
+			"name": "JavaScript Debug Terminal",
+			"request": "launch",
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "node-terminal",
+			"name": "JavaScript Debug Terminal",
+			"request": "launch",
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "node-terminal",
+			"name": "JavaScript Debug Terminal",
+			"request": "launch",
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "node",
+			"name": "Run Current File",
+			"request": "launch",
+			"program": "${workspaceFolder}\\Lógica de Programação e Algoritmos com JavaScript - Edécio Lepsen\\Cap.06\\Nodejs\\Node.js"
 		}
 	],
 	"lastProgramExecuted": "<cancel>",
