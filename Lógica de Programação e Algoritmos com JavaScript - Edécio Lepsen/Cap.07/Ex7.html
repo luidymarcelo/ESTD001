@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"    content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title> Programa Caixa da Loja </title>
+</head>
+<body>
+    <img src="img/Screenshot_1.png" alt="Programa Caixa da Loja" class="alta">
+
+    <h1> Programa Caixa da Loja </h1>
+
+    <form>
+        <p> Data de vencimento:
+            <input type="date" id="inData" required>
+        </p>
+        <p> Valor da Conta:
+            <input type="number" min="0" step="0.01" class="alinha-direita" id="inValor" required>
+            <input type="submit" value="Calcular Multa">
+        </p>
+        <p> Valor da Multa:
+            <input type="number" id="inMulta" class="alinha-direita" readonly>
+        </p>
+        <p> Valor Juros:
+            <input type="number" id="inJuros" class="alinha-direita" readonly>
+        </p>
+        <p> Valor Total:
+            <input type="number" id="inTotal" class="alinha-direita" readonly>
+            <input type="reset" value="Limpar Campos">
+        </p>
+    </form>
+    <h3></h3>
+    <script src="js/Ex7.js"></script>
+</body>
+</html>
