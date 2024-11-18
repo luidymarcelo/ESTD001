@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"      content="IE=edge">
+    <meta name="viewport"                   content="width=device-width, initial-scale=1.0">
+    <link rel="icon"                        type="image/png"                                   href="img/Screenshot_2.png">
+    <link rel="stylesheet"                  href="css/style.css">
+    <title> Pizzaria avenida </title>
+</head>
+<body>
+    <img src="img/Screenshot_2.png" alt="Pizzaria avenida">
+
+    <h1> Pizzaria avenida </h1>
+
+    <form>
+        <p>
+            Item do Pedido:
+            <input type="radio" name="produto" id="rbPizza" checked autofocus> Pizza
+            <input type="radio" name="produto" id="rbBebida"> Bebida
+            <span> Item:</span>
+            <select id="inPizza">
+                <option value="media">Pizza Média</option>
+                <option value="grande">Pizza Grande</option>
+                <option value="familia">Pizza Familiar</option>
+            </select>
+            <select id="inBebida" class="oculta">
+                <option value="refrigerante">Refrigerante</option>
+                <option value="suco">Suco</option>
+                <option value="agua">Água</option>
+            </select>
+        </p>
+        <P> Detalhes do Item:
+            <input type="text" id="inDetalhes" class="Detalhes">
+            <input type="submit" value="Adicionar ao Pedido">
+        </P>
+    </form>
+    <pre></pre>
+    <script src="script/Ex4.js"></script>
+</body>
+</html>

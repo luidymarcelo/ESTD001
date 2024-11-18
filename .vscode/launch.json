@@ -51,6 +51,12 @@
 			"name": "Run Current File",
 			"request": "launch",
 			"program": "${workspaceFolder}\\Lógica de Programação e Algoritmos com JavaScript - Edécio Lepsen\\Cap.06\\Nodejs\\Node.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"program": "\\Lógica de Programação e Algoritmos com JavaScript - Edécio Lepsen\\Cap.08\\nodejs\\Ex5.js"
 		}
 	],
 	"lastProgramExecuted": "<cancel>",
