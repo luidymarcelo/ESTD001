@@ -1,0 +1,36 @@
+h1 {border-bottom-style: inset;}
+h3 {border-bottom-style: inset;}
+pre {font-family: 1.2em;}
+img.normal {float: left; height: 300px; width: 300px;}
+img.alta {float: left; height: 600px; width: 600px;}
+span {margin-left: 70px;}
+select {width: 150px;}
+.detalhes {width: 400px;}
+.oculta {display: none;}
+.exibe {display: inline;}
+
+#divPalco {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os itens que não cabem na linha quebrem para a linha seguinte */
+    gap: 5px;        /* Espaçamento entre as poltronas */
+    justify-content: center;
+}
+
+#divPalco p {
+    font-size: 1.5rem; /*Tamanho da fonte da poltrona*/
+    font-weight: bold; /*Peso da fonte da poltrona*/
+    padding: 15px;     /* Espaçamento interno da poltrona */
+    width: 100%;       /* Largura da poltrona */
+}
+
+figure {
+    width: 30px;       /* Defina uma largura fixa para cada poltrona */
+    height: 30px;      /* Defina uma altura fixa para as poltronas */
+    margin: 5px;       /* Margem para espaçar as figuras (opcional) */
+    text-align: center; /* Centraliza o conteúdo dentro da figure */
+}
+
+img.poltrona {
+    width: 50%;       /* Faz com que a imagem ocupe toda a largura da figure */
+    height: auto;      /* Ajusta a altura automaticamente para manter a proporção */
+}
