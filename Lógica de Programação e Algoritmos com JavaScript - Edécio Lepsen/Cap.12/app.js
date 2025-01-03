@@ -1,19 +1,27 @@
 const express = require("express")
 const app = express()
 const port = 3001
+const livros = require('./livros')
 
 const log = (req, res, next) => {
-    console.log(`................. Acessado em ${new Date()}`)
+    const { titulo, genero } = req.body
+    console.log(`................. Acessado em ${new Date()}, com os dados de ${titulo} e ${genero}`)
     next()
 }
+
+app.use(express.json())
+
+app.use(log)
+
+app.use('/livros', livros)
 
 app.get("/", (req, res) => {
     res.send("Foi alterado algo?")
 })
 
-app.use(express.json())
+app.use('/livros', livros)
 
-app.post('/filmes', log, (req, res) => {
+app.post('/filmes', (req, res) => {
     //const titulo = req.body.titulo
     //const genero = req.body.genero
 
@@ -38,3 +46,4 @@ app.get('/transfere', log, (req, res) => {
 app.get('/teste', log, (req, res) => {
     res.send("Teste")
 })
+
