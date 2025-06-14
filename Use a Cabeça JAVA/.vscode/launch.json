@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ModificarArquivo",
+            "request": "launch",
+            "mainClass": "ModificarArquivo",
+            "projectName": "ESTD005_aaa6a66c"
+        },
+        {
+            "type": "java",
+            "name": "SimpleStartupTestDrive",
+            "request": "launch",
+            "mainClass": "SimpleStartupTestDrive",
+            "projectName": "ESTD005_aaa6a66c"
+        }
+    ]
+}
