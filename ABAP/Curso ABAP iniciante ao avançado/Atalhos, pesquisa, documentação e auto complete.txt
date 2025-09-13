@@ -1,0 +1,4 @@
+F1 - Seleciona o campo, irá aparecer mais informações sobre o campo, ajuda.
+F3 - Voltar
+F4 - Valores possíveis.
+F8 - Executar função.

@@ -1,0 +1,50 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa utilizando mensagens
+
+REPORT ZCURSO_011.
+
+*SELECTION-SCREEN BEGIN OF BLOCK bl.
+*  PARAMETERS:
+*    p_msg(60)   TYPE c OBLIGATORY DEFAULT 'Isso é uma mensagem',
+*    p_type      TYPE c OBLIGATORY.
+*SELECTION-SCREEN END OF BLOCK bl.
+
+*Normal
+*START-OF-SELECTION.
+*  MESSAGE p_msg TYPE p_type.
+*
+*WRITE 'Fim do programa'.
+
+* S - SUCESSO
+* E - ERRO
+* W - AVISO
+* I - INFORMAÇÃO
+* A - ABORTAR
+* X - CANCELAR
+
+*EX. p_type = 'S', mas o icone vai ser de erro por conta do DISPLAY LIKE
+*START-OF-SELECTION.
+*   MESSAGE p_msg TYPE p_type DISPLAY LIKE 'E'.
+*
+*WRITE 'Fim do programa'.
+
+*START-OF-SELECTION.
+*  MESSAGE S000(ZTESTE) WITH 'LUIDY'.
+*
+*  WRITE 'Fim do programa'.
+
+*START-OF-SELECTION.
+*  sy-msgid = 'ZTESTE'.
+*  MESSAGE ID sy-msgid TYPE 'S' NUMBER '000'WITH 'LUIDY'.
+*
+*  WRITE 'Fim do programa'.
+
+"Redireciona uma mensagem para uma variável (ld_message) depois WRITE na tela
+START-OF-SELECTION.
+  DATA: ld_message TYPE string.
+  MESSAGE S000(ZTESTE) WITH 'LUIDY' INTO ld_message.
+  WRITE ld_message.
+  SKIP.
+
+  WRITE 'Fim do programa'.

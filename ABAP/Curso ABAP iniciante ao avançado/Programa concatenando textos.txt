@@ -1,0 +1,32 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa concatenando textos
+
+REPORT ZCURSO_005.
+
+DATA ld_nome(100)            TYPE c.
+DATA ld_sobrenome(100)       TYPE c.
+DATA ld_nomecompleto(201)    TYPE c.
+
+ld_nome         = 'Luidy'.
+ld_sobrenome    = 'Marcelo Neres'.
+
+*CONCATENATE ld_nome ld_sobrenome INTO ld_nomecompleto SEPARATED BY ' '.
+
+ld_nomecompleto = |{ ld_nome } { ld_sobrenome }|.
+
+WRITE 'Olá'.
+WRITE ld_nomecompleto.
+WRITE '!'.
+NEW-LINE.
+SKIP.
+
+WRITE 'Você foi convidado para a festa de fim de ano, contamos com a sua presença'.
+NEW-LINE.
+SKIP.
+
+WRITE 'Atenciosamente,'.
+NEW-LINE.
+
+WRITE 'Empresa XXX'.
+NEW-LINE.

@@ -1,0 +1,27 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa que realiza calculo de média anual para aluno
+
+REPORT ZCURSO_006.
+
+SELECTION-SCREEN BEGIN OF BLOCK bl.
+  PARAMETERS:
+    p_1bim TYPE p LENGTH 8 DECIMALS 2,
+    p_2bim TYPE p LENGTH 8 DECIMALS 2,
+    p_3bim TYPE p LENGTH 8 DECIMALS 2,
+    p_4bim TYPE p LENGTH 8 DECIMALS 2.
+SELECTION-SCREEN END OF BLOCK bl.
+
+START-OF-SELECTION.
+
+  DATA(ld_media) = ( p_1bim + p_2bim + p_3bim + p_4bim ) / 4.
+  
+*Também há o "IF NOT" que é a expressão "!" contendo a mesma formade uso
+
+  IF ld_media >= 7.
+    WRITE: / 'A média anual do aluno é:', ld_media, 'parabéns você passou'.
+  ELSEIF ld_media = 6.
+    WRITE 'Foi quase... tirou um 6'.
+  ELSE.
+    WRITE 'Seu mereda'.
+  ENDIF.

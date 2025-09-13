@@ -1,0 +1,8 @@
+SE38 - Cria um programa.
+SE80 - Cria uma request.
+SE10 - Libera request.
+SE11 - Tabelas do DB.
+SU01 - Cadastro de usuário.
+SE24 - Pesquisa de classe.
+SE91 - Classe de mensagem
+SE93 - Pesquisa de transação

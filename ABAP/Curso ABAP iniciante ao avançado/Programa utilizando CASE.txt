@@ -1,0 +1,30 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 26/07/2025
+* Programa utilizando CASE
+
+REPORT ZCURSO_009.
+
+SELECTION-SCREEN BEGIN OF BLOCK bl.
+  PARAMETERS p_cat TYPE c LENGTH 1.
+SELECTION-SCREEN END OF BLOCK bl.
+
+START-OF-SELECTION.
+
+  DATA lv_categoria TYPE string.
+
+  CASE p_cat.
+    WHEN 'A'.
+      lv_categoria = 'Moto'.
+    WHEN 'B'.
+      lv_categoria = 'Carro'.
+    WHEN 'C'.
+      lv_categoria = 'Veículos de Carga'.
+    WHEN 'D'.
+      lv_categoria = 'Transporte de Passageiros'.
+    WHEN 'E'.
+      lv_categoria = 'Caminhões'.
+    WHEN OTHERS.
+      lv_categoria = 'Categoria inválida'.
+  ENDCASE.
+
+  WRITE: / |Categoria selecionada: { lv_categoria }|.

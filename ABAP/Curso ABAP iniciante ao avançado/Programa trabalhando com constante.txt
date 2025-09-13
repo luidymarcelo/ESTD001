@@ -1,0 +1,16 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa para trabalhar com constantes
+
+REPORT ZCURSO_004.
+
+CONSTANTS lc_pi(12)       TYPE p DECIMALS 13 VALUE '3.1415926535898'.
+
+DATA ld_raio(12)    TYPE p DECIMALS 2.
+DATA ld_area(12)    TYPE p DECIMALS 2.
+
+ld_raio = 10.
+
+ld_area = ( ld_raio * ld_raio ) * lc_pi.
+
+WRITE: 'A área de um circulo com raio de ', ld_raio, ' e ', ld_area.

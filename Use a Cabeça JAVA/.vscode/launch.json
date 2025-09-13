@@ -5,6 +5,13 @@
             "name": "ModificarArquivo",
             "request": "launch",
             "mainClass": "ModificarArquivo",
+            "projectName": "Use a Cabeça JAVA_777df9a8"
+        },
+        {
+            "type": "java",
+            "name": "ModificarArquivo",
+            "request": "launch",
+            "mainClass": "ModificarArquivo",
             "projectName": "ESTD005_aaa6a66c"
         },
         {

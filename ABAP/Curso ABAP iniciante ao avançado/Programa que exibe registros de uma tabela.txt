@@ -1,0 +1,19 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa que exibe registros de uma tabela
+
+REPORT ZCURSO_002.
+
+START-OF-SELECTION.
+  DATA: lt_data TYPE STANDARD TABLE OF saplane.
+  DATA: ls_data TYPE saplane.
+
+  SELECT *
+    INTO TABLE lt_data
+    FROM saplane.
+
+  LOOP AT lt_data INTO Ls_data.
+    WRITE ls_data-planetype.
+    WRITE ls_data-producer.
+    NEW-LINE.
+  ENDLOOP.

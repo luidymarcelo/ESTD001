@@ -1,0 +1,34 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 26/07/2025
+* Programa utilizando ESTRUTURA
+
+REPORT ZCURSO_014.
+
+START-OF-SELECTION.
+  DATA: BEGIN OF ls_cliente
+    , id TYPE int4
+    , nome(20) TYPE C
+    , email(50) TYPE C
+    , END OF ls_cliente.
+
+  DATA ld_id    TYPE int4.
+  DATA ld_nome(20)  TYPE  C.
+  DATA ld_email(50) TYPE  C.
+
+  ls_cliente-id = 1.
+  ls_cliente-nome = 'João'.
+  ls_cliente-email = 'joaos@tt.com'.
+
+  ld_id   = 1.
+  ld_nome	= 'João'.
+  ld_email  = 'joao@jj.com'.
+
+  WRITE ls_cliente-id.
+  WRITE ls_cliente-nome.
+  WRITE ls_cliente-email.
+
+  NEW-LINE.
+
+  WRITE ld_id.
+  WRITE ld_nome.
+  WRITE	ld_email.

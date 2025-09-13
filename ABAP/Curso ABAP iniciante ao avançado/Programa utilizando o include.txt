@@ -1,0 +1,9 @@
+* Autor: Luidy Marcelo Neres de Oliveira
+* 24/07/2025
+* Programa includes
+
+REPORT ZCURSO_012.
+
+INCLUDE ZCURSO_012_TOP.
+INCLUDE ZCURSO_012_SEL.
+INCLUDE ZCURSO_012_SOS.
